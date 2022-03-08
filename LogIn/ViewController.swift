@@ -8,10 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var nameTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
+    
+    @IBOutlet var logInButton: UIButton!
+    @IBOutlet var forgotNameButton: UIButton!
+    @IBOutlet var forgotPasswordButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 

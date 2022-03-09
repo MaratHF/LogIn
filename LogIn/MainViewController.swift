@@ -16,8 +16,8 @@ class MainViewController: UIViewController {
     @IBOutlet var forgotNameButton: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
     
-    private var name = "Marat"
-    private var password = "1234"
+    private let name = "Marat"
+    private let password = "1234"
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let _ = touches.first {

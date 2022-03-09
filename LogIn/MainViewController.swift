@@ -19,10 +19,6 @@ class MainViewController: UIViewController {
     private var name = "Marat"
     private var password = "1234"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let _ = touches.first {
             view.endEditing(true)

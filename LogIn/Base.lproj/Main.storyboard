@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,10 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Log in"/>
+                                                <connections>
+                                                    <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="2TA-ek-J5v"/>
+                                                    <segue destination="2O2-e2-Y4r" kind="show" id="s8z-cA-sx2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -56,6 +60,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="forgotNameButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="nit-E2-YDT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9B-AU-MS1">
                                                 <rect key="frame" x="223.5" y="0.0" width="130.5" height="30"/>
@@ -70,6 +77,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="forgotPasswordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xl-am-IXw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -98,16 +108,18 @@
             </objects>
             <point key="canvasLocation" x="872" y="70"/>
         </scene>
-        <!--View Controller-->
+        <!--Greeting View Controller-->
         <scene sceneID="Xy4-fz-Iuv">
             <objects>
-                <viewController id="2O2-e2-Y4r" sceneMemberID="viewController">
+                <exit id="t2V-Gh-O9K" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c87-qV-S15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="2O2-e2-Y4r" customClass="GreetingViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f6H-O5-ccb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="229" translatesAutoresizingMaskIntoConstraints="NO" id="9dn-Pf-i6e">
-                                <rect key="frame" x="25" y="306" width="364" height="294.5"/>
+                                <rect key="frame" x="25" y="328" width="364" height="294.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RE-ue-d8P">
                                         <rect key="frame" x="156" y="0.0" width="52" height="26.5"/>
@@ -120,6 +132,10 @@
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log out"/>
+                                        <connections>
+                                            <action selector="logOutButtonPressed" destination="2O2-e2-Y4r" eventType="touchUpInside" id="Kbl-KK-cvv"/>
+                                            <segue destination="t2V-Gh-O9K" kind="unwind" unwindAction="unwind:" id="bRP-rv-dvO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -133,14 +149,17 @@
                             <constraint firstItem="ndp-vp-KVJ" firstAttribute="trailing" secondItem="9dn-Pf-i6e" secondAttribute="trailing" constant="25" id="nlu-rx-YOY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="2RE-ue-d8P" id="9Dy-Es-W1g"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c87-qV-S15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1576.8115942028987" y="70.3125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Uf-d7-O75">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJB-LV-8et" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Aj-eb-iN6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G3d-lp-Jdo">
@@ -152,7 +171,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xkT-3h-CYj"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yJB-LV-8et" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="146" y="70"/>
         </scene>

@@ -62,6 +62,14 @@ extension MainViewController {
             )
         }
     }
+// Константин, здравствуйте =) Если я в коде выше делаю обе проверки на nil в одном guard таким образом:
+//guard let inputName = nameTF.text, inputPassword = passwordTF.text else {return}
+// То при выполнении кода:
+//    if inputName != name && inputPassword != password {
+//    showAlert(
+//        title: "Invalid login or password",
+//        message: "Please enter correct login and password") }
+//Выполняется только первое условие, а второе игнорируется. В чем может быть дело?
     
     @IBAction func forgotNameButtonPressed() {
         showAlert(title: "Help", message: "Username is \(name)")

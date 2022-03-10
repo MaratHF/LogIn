@@ -18,11 +18,7 @@ class GreetingViewController: UIViewController {
         
         greetingLabel.text = "Welcome, \(welcomeMessage ?? "")!"
         
-        navigationItem.hidesBackButton = true
-    }
-    
-    @IBAction func logOutButtonPressed() {
-        dismiss(animated: true)
+//        navigationItem.hidesBackButton = true
     }
 }
 

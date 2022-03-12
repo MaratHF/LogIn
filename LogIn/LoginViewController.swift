@@ -15,14 +15,9 @@ class LoginViewController: UIViewController {
     private let name = "Marat"
     private let password = "1234"
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingVC = segue.destination as? GreetingViewController else { return }
-        greetingVC.welcomeMessage = nameTF.text
+        greetingVC.welcomeMessage = name
     }
     
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
@@ -32,15 +27,6 @@ class LoginViewController: UIViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == nameTF {
-            passwordTF.becomeFirstResponder()
-        } else {
-            logInButtonPressed()
-        }
-        return true
     }
 }
 
@@ -69,5 +55,22 @@ extension LoginViewController {
     @IBAction func unwind(_ sender: UIStoryboardSegue) {
         nameTF.text = ""
         passwordTF.text = ""
+    }
+}
+
+// MARK: - Keyboard
+extension LoginViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            logInButtonPressed()
+        }
+        return true
     }
 }

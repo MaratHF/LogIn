@@ -11,12 +11,12 @@ class GreetingViewController: UIViewController {
 
     @IBOutlet var greetingLabel: UILabel!
     
-    var welcomeMessage: String!
+    var welcomeMessage = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        greetingLabel.text = "Welcome, \(welcomeMessage ?? "")!"
+        greetingLabel.text = "Welcome, \(welcomeMessage)!"
         
 //        navigationItem.hidesBackButton = true
     }

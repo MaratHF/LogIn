@@ -16,8 +16,10 @@ class MyFotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myFotoImage.layer.cornerRadius = myFotoImage.frame.height / 2
-        
         myFotoImage.image = UIImage(named: user.person.image)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        myFotoImage.layer.cornerRadius = myFotoImage.frame.height / 2
     }
 }

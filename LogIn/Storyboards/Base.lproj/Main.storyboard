@@ -131,7 +131,7 @@
                             <constraint firstItem="ndp-vp-KVJ" firstAttribute="trailing" secondItem="9dn-Pf-i6e" secondAttribute="trailing" constant="25" id="nlu-rx-YOY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Un1-3l-Ssv">
+                    <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="Un1-3l-Ssv">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
@@ -208,7 +208,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bru-lv-aMi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="BwL-2s-s0M" firstAttribute="leading" secondItem="bru-lv-aMi" secondAttribute="leading" constant="30" id="4d8-8Q-jxC"/>
                             <constraint firstItem="bru-lv-aMi" firstAttribute="trailing" secondItem="BwL-2s-s0M" secondAttribute="trailing" constant="30" id="ou8-39-sag"/>
@@ -250,7 +250,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C2M-AU-6NX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="p0H-mb-RR8" firstAttribute="centerX" secondItem="C2M-AU-6NX" secondAttribute="centerX" id="3Qc-OK-N8V"/>
                             <constraint firstItem="p0H-mb-RR8" firstAttribute="height" secondItem="fEK-sf-dMn" secondAttribute="height" multiplier="0.40493" id="Di5-FD-kX9"/>
@@ -270,7 +270,7 @@
         <scene sceneID="17C-PN-c5i">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Rf-dh-Nug" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About Me" id="NTJ-V2-Tbv"/>
+                    <tabBarItem key="tabBarItem" title="About Me" image="person.fill" catalog="system" id="NTJ-V2-Tbv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gkW-xU-HWw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -287,9 +287,7 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
